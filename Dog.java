@@ -1,22 +1,38 @@
-public class Dog {
+ class Dog {
     String name;
+    int numOfPuppies;
     boolean isMale;
-    int puppies;
-    String listofpuppies[] = new String [5];
-
-
+    String[] listOfPuppies;
+  
     public void setName(String thisName){
-        thisName = name; 
+      name = thisName;
     }
-   
-    public String showName( String thisName){
-        return thisName;
+  
+    public String showName(){
+      return name;
     }
-
-    public String bark(){
-        return "woof woof";
+  
+    public void bark(){
+      System.out.println("woof! woof!");
+    }  
+  
+    public void setNumOfPuppies(int numOfPuppy){
+      numOfPuppies = numOfPuppy;
     }
-
-   
+  
+    public int showNumberOfPuppies(){
+      return numOfPuppies;
+    }
+  
+    public void setListOfPuppies(String[] puppies){
+      listOfPuppies = puppies;
+  
+    }
+  
+    public void showPuppies(){
+      for(int i = 0; i < listOfPuppies.length; i++){
+        System.out.println("Puppy " + listOfPuppies[i]);
+      }
+    }
 }
 
